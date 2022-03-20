@@ -21,3 +21,4 @@
 Maniek's homework:
 - put those into Trello
 - find the difference on github between tag and release
+- fix IJ build process
