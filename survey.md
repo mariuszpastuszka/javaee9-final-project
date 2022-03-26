@@ -1,6 +1,17 @@
 ### Social network - business requirements 
 - welcome page
   - news feed - last 24 hours (needs logging)
+    - news feed - without logging
+      - business perspective
+        - news from last 24 hours
+        - news 
+          - text
+          - picture
+          - post author
+          - timestamp
+      - developers perspective
+        - 
+    - news feed - with logging
   - information about login
 - profile
   - user name, location, picture (about yourself) - editing
