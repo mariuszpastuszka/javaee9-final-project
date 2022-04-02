@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import javax.validation.Valid;
 import java.util.List;
 
 @RestController
@@ -48,7 +49,7 @@ public class PostController {
 
     // TODO: validation on dtos
     @PostMapping()
-    public PostDto createNewPost(@RequestBody PostDto toStore) {
+    public PostDto createNewPost(@Valid @RequestBody PostDto toStore) {
         log.info("trying to store new post: [{}]", toStore);
 
         return postService.createNewPost(toStore);
