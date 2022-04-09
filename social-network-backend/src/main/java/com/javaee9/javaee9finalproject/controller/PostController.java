@@ -19,7 +19,7 @@ import java.util.List;
 @RequestMapping("/posts")
 // never - ever use entities inside controllers (use dtos)
 // TODO: move to config
-@CrossOrigin("http://localhost:4200")
+@CrossOrigin("${allowed.origin.url}")
 public class PostController {
     private final PostService postService;
 
