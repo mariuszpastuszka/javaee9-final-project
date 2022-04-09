@@ -3,6 +3,7 @@ package com.javaee9.javaee9finalproject.controller;
 import com.javaee9.javaee9finalproject.dto.PostDto;
 import com.javaee9.javaee9finalproject.service.PostService;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -17,6 +18,8 @@ import java.util.List;
 @Slf4j
 @RequestMapping("/posts")
 // never - ever use entities inside controllers (use dtos)
+// TODO: move to config
+@CrossOrigin("http://localhost:4200")
 public class PostController {
     private final PostService postService;
 
