@@ -13,7 +13,7 @@ export class NewsFeedService {
 
   // Observable objects are lazy
   getRecentPosts(): Observable<Array<Post>> {
-    return this.http.get<any>(BACKEND_NEWS_FEED)
+    return this.http.get<any>(BACKEND_NEWS_FEED) // Observable means You're giving receipt to perform it later
       .pipe(
         tap(value => console.log('data before processing: ' + JSON.stringify(value))),
         map((value: Array<any>) =>
