@@ -2,6 +2,8 @@ import { Component } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
 import { NewsFeedService } from '../../services/news-feed.service';
 import { Post } from '../../models/post';
+import { Router } from '@angular/router';
+import { NEWS_FEED_URL } from '../../constants/constant';
 
 @Component({
   selector: 'app-news-form',
@@ -16,7 +18,8 @@ export class NewsFormComponent {
     author: ['', [Validators.required, Validators.minLength(3)]]
   })
   constructor(private formBuilder: FormBuilder,
-              private newsService: NewsFeedService) { }
+              private newsService: NewsFeedService,
+              private router: Router) { }
 
   onFormSubmit() {
     console.log("on submitting whole form")
@@ -32,5 +35,7 @@ export class NewsFormComponent {
     }
 
     this.newsService.createNewPost(post);
+
+    this.router.navigateByUrl(NEWS_FEED_URL).then()
   }
 }

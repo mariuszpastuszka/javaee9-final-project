@@ -2,10 +2,9 @@
   <h1>Welcome to {{applicationName}}</h1>
 </div>
 
-<div>
-  <app-news-form></app-news-form>
-</div>
-
-<div>
-  <app-news-feed></app-news-feed>
-</div>
+<nav>
+  <a routerLink="/{{recentPostsUrl}}">Recent posts</a>
+  <a routerLink="/{{createNewPostUrl}}">Create new post</a>
+</nav>
+<!--router-outlet will be replaced by content of component selected by url address-->
+<router-outlet></router-outlet>

@@ -9,6 +9,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { NewsFeedComponent } from './components/news-feed/news-feed.component';
 import { NewsFormComponent } from './components/news-form/news-form.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { AppRoutingModule } from './app-routing.module';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { ReactiveFormsModule } from '@angular/forms';
     BrowserAnimationsModule,
     MatCardModule,
     MatButtonModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [WelcomeComponent]
